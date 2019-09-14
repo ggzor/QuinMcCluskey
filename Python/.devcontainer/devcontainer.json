@@ -1,0 +1,12 @@
+{
+	"name": "Python Environment",
+	"dockerComposeFile": "../../docker-compose.yml",
+	"service": "dev-python",
+	"workspaceFolder": "/workspace/Python",
+    "shutdownAction": "none",
+	"settings": { 
+		"terminal.integrated.shell.linux": "bash"
+	},
+    "extensions": ["ms-python.python"],
+    "postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/* && pipenv install && pipenv install -d"
+}

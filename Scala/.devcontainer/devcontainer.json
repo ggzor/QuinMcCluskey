@@ -1,0 +1,12 @@
+{
+	"name": "Scala Environment",
+	"dockerComposeFile": "../../docker-compose.yml",
+	"service": "dev-scala",
+    "workspaceFolder": "/workspace/Scala",
+    "shutdownAction": "none",
+	"settings": { 
+		"terminal.integrated.shell.linux": "bash"
+	},
+    "extensions": ["scalameta.metals"],
+    "postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
+}

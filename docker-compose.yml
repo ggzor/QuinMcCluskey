@@ -1,0 +1,21 @@
+version: '3'
+services:
+  dev-python:
+    user: vscode
+    build:
+      context: .
+      dockerfile: Python/.devcontainer/Dockerfile
+    volumes:
+      - .:/workspace
+      - ~/.ssh:/home/vscode/.ssh-localhost
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+  dev-scala:
+    user: vscode
+    build:
+      context: .
+      dockerfile: Scala/.devcontainer/Dockerfile
+    volumes:
+      - .:/workspace
+      - ~/.ssh:/home/vscode/.ssh-localhost
+    command: /bin/sh -c "while sleep 1000; do :; done"
